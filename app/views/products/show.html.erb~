@@ -1,0 +1,23 @@
+<p>
+  <strong>Name</strong>
+  <% @product.name %>
+</p>
+
+<p>
+  <strong>Description</strong>
+  <% @product.description %>
+</p>
+
+
+<p>
+  <strong>Categories</strong>
+  <% @product.categories.each do |cat| %>
+    <%= cat.name %></br>
+  <% end %>
+</p>
+
+
+<p>
+  <strong>Picture</strong>
+  <td><%= image_tag product.picture.url(:medium) %><td>
+</p>
